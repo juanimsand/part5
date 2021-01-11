@@ -117,8 +117,8 @@ const App = () => {
         }
     }
 
-    const handleLike = async (event) => {
-        event.preventDefault()
+    const handleLike = async (blog) => {
+        //event.preventDefault()
         try {
             // think a GET should be done for update the likes before increase by one
             await blogService.updateLikes(blog)
