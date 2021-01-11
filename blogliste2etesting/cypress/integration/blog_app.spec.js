@@ -41,7 +41,7 @@ describe('Blog app', function () {
         })
     })
 
-    describe.only('When logged in', function () {
+    describe('When logged in', function () {
         beforeEach(function () {
             cy.login({ username: 'jimsand', password: 'secreta' })
         })
@@ -85,7 +85,7 @@ describe('Blog app', function () {
 
         })
 
-        it.only('A blog cannot be deleted by a user who did not create it', function () {
+        it('A blog cannot be deleted by a user who did not create it', function () {
             let i
             // I need to create some blogs but I won't like them
             cy.createBlog({ title: 'a blog created by cypress', author: 'Cypress', url: 'http://cypresscreatedablog.com' })
